@@ -1,0 +1,23 @@
+<div class="container">
+
+    <div class="lista">
+        <div class="icone"></div>
+        <h1>Anderson Furyama</h1>
+        <ul>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#habilidades">Habilidades</a></li>
+            <li><a href="#projects">Projetos</a></li>
+            <li><a href="#formacao">Formação</a></li>
+
+        </ul>
+        <button><a href="#contato">Contato</a></button>
+    </div>
+    <button style="color: white;" mat-button [matMenuTriggerFor]="menu" class="menu">Menu</button>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item><a href="#sobre">Sobre</a></button>
+            <button mat-menu-item><a href="#habilidades">Habildades</a></button>
+            <button mat-menu-item><a href="#projects">Projetos</a></button>
+            <button mat-menu-item><a href="#formacao">Formação</a></button>
+            <button mat-menu-item><a href="#contato">Contato</a></button>
+        </mat-menu>
+</div>

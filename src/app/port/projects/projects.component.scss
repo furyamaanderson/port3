@@ -1,0 +1,266 @@
+
+.container{
+    position: relative;
+    height: 230vh;
+    flex-wrap: wrap;
+}
+
+.container-pai{
+    position: relative;
+    top:5vh;
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    margin-top: 5vh;
+    width: 100%;
+    height: 90vh;
+    flex-wrap: wrap;
+}
+
+.container2{
+    position: relative;
+    top:10vh;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5vh;
+    width: 100%;
+    height: 90vh;
+    flex-wrap: wrap;
+    
+}
+
+h1{
+    text-align: center;
+    position: relative;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 40px;
+    color: white;
+    text-decoration: underline;
+    text-shadow: 0 0 7px white;
+}
+
+.sub {
+    text-align: center;
+    position: relative;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 25px;
+    color: gray;
+}
+
+span{
+    animation: changeColor 10s infinite;
+}
+
+.card-1, .card-4{
+    width: 60vw;
+    height: 90vh;
+    cursor: pointer;
+    border-radius: 20px;
+    margin-top: 15px;
+    animation: border-animation 3s infinite;
+    border: 4px solid transparent;
+    color: white;
+    display: block;
+    transition: all 0.5s ease;
+    background: rgb(23,23,28);
+    
+}
+
+
+img{
+    width: 55vw;
+    height: 40vh;
+    border-radius: 15px;
+    margin-left: 2.3vw;
+    margin-top: 15px;
+}
+
+.container-pai h2{
+    margin-left: 2.3vw;
+    margin-top: 5px;
+}
+
+.container-pai h4{
+    margin-left: 2.3vw;
+    margin-top: 5px;
+}
+
+.container-pai p{
+    margin-left: 2.3vw;
+    margin-top: 5px;
+}
+.container2 h2{
+    margin-left: 2.3vw;
+    margin-top: 5px;
+}
+
+.container2 h4{
+    margin-left: 2.3vw;
+    margin-top: 5px;
+}
+
+.container2 p{
+    margin-left: 2.3vw;
+    margin-top: 5px;
+}
+
+.usados{
+    background-color: red;
+    width: 100%;
+    height: 5vh;
+    margin-top: 5px;
+}
+
+.card-1:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 7px white,
+    0 0 25px white;
+}
+
+
+.card-4:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 7px white,
+    0 0 25px white;
+}
+
+
+
+@keyframes border-animation {
+    0% {
+        border-color: grey;
+    }
+    50% {
+        border-color: white;
+    }
+    100% {
+        border-color: grey;
+    }
+}
+
+
+
+@keyframes changeColor {
+    0% {
+        color: rgb(23,23,28);; /* Cor inicial */
+    }
+     /* Cor durante a animação */
+    
+    50% {
+        color: white; /* Cor durante a animação */
+    }
+    
+    100% {
+        color: rgb(23,23,28); /* Cor final, voltando para a cor original */
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    .card-1,.card-4{
+        width: 70vw;
+        height: 105vh;
+    }
+
+    img{
+        width: 65vw;
+        height: 40vh;
+    }
+    .container-pai{
+        height: 150vh;
+    }
+
+    .container2{
+        height: 150vh;
+    }
+
+    .container{
+        height: 340vh;
+    }
+    
+}
+
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+    .card-1, .card-4{
+        width: 60vw;
+        height: 120vh;
+    }
+
+    img{
+        width: 55vw;
+        height: 40vh;
+    }
+    .container-pai{
+        height: 170vh;
+    }
+
+    .container2{
+        height: 170vh;
+    }
+
+    .container{
+        height: 380vh;
+    }
+}
+
+
+// botão
+button{
+    position: relative;
+    width: 60px;
+    height: 30px;
+    border-radius: 5px;
+    align-items: center;
+    display: flex;
+    top: 30px;
+    left: 30px;
+    color: black;
+    background-color: white;
+    font-family: monospace;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    
+}
+
+button a{
+    text-decoration: none;
+}
+
+button:hover{
+    box-shadow: 0 0 1px white,
+    0 0 7px white, 
+    0 0 25px white;
+    transform: scale(1.1);
+}
+
+
+@media only screen and (min-width: 901px) and (max-width: 1300px) {
+   .container-pai h4{
+    display: none;
+   }
+
+   .container2 h4{
+    display: none;
+   }
+
+   img{
+    width: 55vw;
+    height: 40vh;
+}
+.container-pai{
+    height: 170vh;
+}
+
+.container2{
+    height: 170vh;
+}
+
+.container{
+    height: 380vh;
+}
+
+.card-1, .card-4{
+    width: 60vw;
+    height: 110vh;
+}
+}

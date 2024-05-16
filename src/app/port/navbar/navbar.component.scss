@@ -1,0 +1,176 @@
+// Variáveis
+$white: white;
+$black: black;
+$gray: rgb(23,23,28);
+$vh: 8vh;
+$vw: 7vw;
+$gap: 3vw;
+
+// Mixins
+@mixin button-styles {
+  border-radius: 15px;
+  width: $vw;
+  margin-top: 5px;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  background-color: transparent;
+  border: solid $white;
+}
+
+// Estilos gerais
+.container {
+  width: 100%;
+  height: 10vh;
+  background-color: $gray;
+  position: fixed;
+  z-index: 20;
+}
+
+.lista {
+  display: flex;
+  gap: $gap;
+  justify-content: flex-end;
+  margin-right: $vw;
+  margin-top: 5px;
+
+  ul {
+    display: flex;
+    gap: $gap;
+
+    li {
+      list-style: none;
+      transition: all 0.5s ease;
+
+      a {
+        text-decoration: none;
+        color: $white;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      }
+    }
+  }
+  button {
+    @include button-styles;
+
+    a {
+      text-decoration: none;
+      color: $white;
+      font-weight: bold;
+    }
+  }
+
+}
+
+.icone {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 3px solid $white;
+  position: absolute;
+  left: 30px;
+  top: 1.5vh;
+  box-shadow: 0 0 7px $white;
+}
+
+h1 {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: $white;
+  position: absolute;
+  left: 70px;
+  top: 1.5vh;
+  text-shadow: 0 0 7px $white;
+  overflow: hidden;
+  border-right: .15em solid $white;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .15em;
+  animation: typing 1.5s steps(35, end) forwards, blink .75s step-end infinite 1.5s;
+}
+
+.menu{
+    display: none;
+}
+
+
+// Hover
+.lista ul li:hover {
+  transform: scale(1.2);
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0005)
+}
+
+.lista ul li a:hover {
+  color: $white;
+  text-shadow: 0 0 7px $white;
+  
+
+  
+}
+
+.lista button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 5px $white,
+  0 0 25px white;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0005)
+
+}
+
+// Animações
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 250px;
+  }
+}
+
+@keyframes blink {
+  0%, 10% {
+    border-right-color: transparent;
+  }
+  50% {
+    border-right-color: $white;
+  }
+}
+
+// Media queries
+@media only screen and (max-width: 600px),
+  only screen and (min-width: 601px) and (max-width: 1024px) {
+  
+
+  .icone {
+    width: 25px;
+    height: 25px;
+  }
+
+  .lista ul,
+  .lista button {
+    display: none;
+  }
+
+  .menu {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    right: $vw;
+    left: 80vw;
+    top: 2px;
+    transition: all 0.5s ease;
+  
+
+    button a {
+      list-style: none;
+      text-decoration: none;
+      color: $black;
+      text-shadow: 1px 1px 1px $black;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 7px $white;
+
+      a { // Adicione este seletor para alterar a cor do texto dentro do botão
+        color: $white;
+      }
+    }
+  }
+}

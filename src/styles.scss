@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: rgb(23,23,28);
+    background: linear-gradient(90deg, rgba(23,23,28,1) 0%, rgba(18,18,22,1) 47%, rgba(18,19,22,1) 100%);
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

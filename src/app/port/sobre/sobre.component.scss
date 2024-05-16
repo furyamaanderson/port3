@@ -1,0 +1,486 @@
+
+//container1 -----------------
+.container {
+    width: 100%;
+    height: 125vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-img{
+    width: 50%;
+    height: 100%;
+}
+
+.imagem-direita{
+    width: 50%;
+    position: relative;
+    top:30vh;
+    left: 2vw;
+    z-index: 7;
+}
+
+
+.back-1,
+.back-2,
+.back-3,
+.back-4,
+.back-5,
+.back-6 {
+    width: 350px;
+    height: 500px;
+    background-color: transparent;
+    position: absolute;
+    left: 55vw;
+    top: 30vh;
+    overflow: hidden;
+    border: none;
+}
+
+.back-1 {
+    transform: rotate(-45deg);
+    z-index: 1;
+}
+
+.back-2 {
+    transform: rotate(-90deg);
+    z-index: 2;
+}
+
+.back-3 {
+    transform: rotate(-135deg);
+    z-index: 3;
+}
+
+.back-4 {
+    transform: rotate(-180deg);
+    z-index: 4;
+}
+
+.back-5 {
+    transform: rotate(-225deg);
+    z-index: 5;
+}
+
+.back-6 {
+    transform: rotate(-270deg);
+    z-index: 6;
+}
+
+.back-1::before,
+.back-2::before,
+.back-3::before,
+.back-4::before,
+.back-5::before,
+.back-6::before {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 700px;
+    left: 8vh;
+    top: -10vh;
+    background: linear-gradient(white, white);
+    box-shadow: 0 0 7px white,
+        0 0 25px white;
+    animation: animate 5s linear infinite;
+}
+
+.back-1::after,
+.back-2::after,
+.back-3::after,
+.back-4::after,
+.back-5::after,
+.back-6::after {
+    content: '';
+    position: absolute;
+    inset: 5px;
+    background-color: rgba(18, 18, 22, 1);
+
+}
+
+.resumo {
+    width: 40%;
+    height: 100%;
+    text-align: center;   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.resumo h1 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 40px;
+    color: white;
+    text-decoration: underline;
+    text-shadow: 0 0 7px white;
+}
+
+span {
+    animation: changeColor 10s infinite;
+}
+
+.resumo h2 {
+    font-size: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: grey;
+}
+
+.resumo h3 {
+    font-size: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: grey;
+    
+}
+
+.icon{
+    display: flex;  
+    flex-direction: column;
+    align-items: center;
+}
+
+
+button {
+    border-radius: 40%;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    background-color: transparent;
+    border: solid white;
+    box-shadow: 0 0 7px white;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+button img {
+    margin-top: 3px;
+}
+
+button:hover {
+    transform: scale(1.2);
+}
+
+//container 2 ---------------------------------------------------------------------------------------------
+
+.container2 {
+   bottom: 80px;
+    width: 100%;
+    height: 40vh;
+    background-color: white;
+    position: relative;
+    box-shadow: 5px 5px 3px 0px black;
+    z-index: 10;
+}
+
+.divider{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+}
+
+.titulo1, .titulo2, .titulo3{
+    color: black;
+    text-shadow: 1px 1px 1px black;
+    text-decoration: underline;
+}
+
+//Container 3-------------------------------------------------------------------------------------------------
+
+.container3 {
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    height: 110vh;
+}
+
+.texto{
+    width: 60%;
+    height: 100%;
+    margin-top: 15vh;
+    margin-left: 2vw;
+}
+
+.imagem-esquerda{
+    position: relative;
+    width: 50%;
+    height: 100%;
+}
+
+.container3 h1 {
+    position: relative;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 40px;
+    color: white;
+    text-decoration: underline;
+    text-shadow: 0 0 7px white;
+    margin-left: 2vw;
+}
+
+.container3 p {
+    text-align: justify;
+    font-size: 20px;
+    margin-top: 5vh;
+    margin-right: 2vw;
+    margin-left: 2vw;
+    color: grey;
+    line-height: 1.5;
+}
+
+.imagem-neon {
+    position: relative;
+    left: 10.4vw;
+    top:10vh;
+}
+
+.imagem-neon img{
+    width: 330px;
+    height: 480px;
+}
+
+.borda {
+    width: 350px;
+    height: 500px;
+    background-color: transparent;
+    position: absolute;
+    overflow: hidden;
+    left: 10vw;
+    top:8vh;
+    border: transparent;
+    border-radius: 15px;
+}
+
+
+.borda::before {
+    content: '';
+    position: absolute;
+    width: 250px;
+    height: 700px;
+    left: 8vh;
+    top: -15vh;
+    background: linear-gradient(white, white);
+    box-shadow: 0 0 7px white,
+        0 0 25px white;
+    animation: animate 5s linear infinite;
+}
+
+.borda::after {
+    content: '';
+    position: absolute;
+    inset: 5px;
+    border-radius: 15px;
+    background: rgb(22, 22, 26);
+    background: linear-gradient(90deg, rgb(22, 22, 26) 0%, rgb(20, 20, 25) 47%, rgb(20, 20, 24) 100%);
+
+}
+
+.container-img img{
+    position: relative;
+    top:50px;
+}
+
+//Animação -----------------------------------------------------------------------------------------=----------------------------------
+
+
+@keyframes changeColor {
+    0% {
+        color: rgb(23, 23, 28);
+        ;
+        /* Cor inicial */
+    }
+
+    /* Cor durante a animação */
+
+    50% {
+        color: white;
+        /* Cor durante a animação */
+    }
+
+    100% {
+        color: rgb(23, 23, 28);
+        /* Cor final, voltando para a cor original */
+    }
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+
+
+
+
+//------------------------------------------------------------media querys -----------------------------------------------
+
+@media only screen and (max-width: 600px) {
+    
+    .resumo{
+        width: 100%;
+    }
+
+    .container-img{
+        display: none;
+    }
+
+
+    .back-1,
+    .back-2,
+    .back-3,
+    .back-4,
+    .back-5,
+    .back-6 {
+        display: none;
+    }
+    .back-1::before,
+    .back-2::before,
+    .back-3::before,
+    .back-4::before,
+    .back-5::before,
+    .back-6::before {
+        display: none;
+        position: static;
+    }
+
+    .back-1::after,
+    .back-2::after,
+    .back-3::after,
+    .back-4::after,
+    .back-5::after,
+    .back-6::after {
+        display: none;
+
+    }
+
+    .imagem-esquerda{
+        display: none;
+    }
+
+    .texto{
+        width: 100%;
+    }
+
+    .container3{
+        height: 120vh;
+    }
+}
+
+
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+
+    .resumo{
+        width: 100%;
+    }
+
+    .container-img{
+        display: none;
+    }
+
+
+    .back-1,
+    .back-2,
+    .back-3,
+    .back-4,
+    .back-5,
+    .back-6 {
+        display: none;
+    }
+    .back-1::before,
+    .back-2::before,
+    .back-3::before,
+    .back-4::before,
+    .back-5::before,
+    .back-6::before {
+        display: none;
+    }
+
+    .back-1::after,
+    .back-2::after,
+    .back-3::after,
+    .back-4::after,
+    .back-5::after,
+    .back-6::after {
+        display: none;
+
+    }
+
+    .imagem-esquerda{
+        display: none;
+    }
+
+    .texto{
+        width: 100%;
+    }
+
+    .container3{
+        height: 95vh;
+    }
+}
+
+
+@media only screen and (min-width: 901px) and (max-width: 1300px) {
+
+    .resumo{
+        width: 100%;
+    }
+
+    .container-img{
+        display: none;
+    }
+
+    .back-1,
+    .back-2,
+    .back-3,
+    .back-4,
+    .back-5,
+    .back-6 {
+        display: none;
+    }
+
+    .back-1::before,
+    .back-2::before,
+    .back-3::before,
+    .back-4::before,
+    .back-5::before,
+    .back-6::before {
+        display: none;
+    }
+
+    .back-1::after,
+    .back-2::after,
+    .back-3::after,
+    .back-4::after,
+    .back-5::after,
+    .back-6::after {
+        display: none;
+
+    }
+
+    .imagem-esquerda{
+        display: none;
+    }
+
+    .texto{
+        width: 100%;
+    }
+
+    .container3{
+        height: 80vh;
+    }
+
+    
+}
+
+

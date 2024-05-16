@@ -1,0 +1,283 @@
+
+.container {
+    width: 100%;
+    height: 120vh;
+    display: flex;
+
+}
+
+.container2{
+    width: 22%;
+    height: 120vh;
+}
+
+.container3{
+    position: relative;
+    top: 10vh;
+    width: 78%;
+    height: 110vh;
+}
+
+.experiencias {
+    height: 90vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+.experiencias img {
+    width: 50px;
+    height: 50px;
+    border: solid white;
+    border-radius: 10px;
+    margin-left: 3vw;
+    margin-top: 2vh;
+}
+
+.experiencia-1, .experiencia-2 {
+    border-radius: 20px;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    animation: border-animation 3s infinite;
+    border: 4px solid transparent;
+    transition: transform 0.5s;
+    background: rgb(23,23,28);
+    margin-top: 2vh;
+}
+
+.cima  {
+    display: flex;
+}
+
+.cima-texto{
+    margin-left: 3vh;
+}
+.baixo{
+    position: relative;
+    text-align: justify;
+    margin-right: 6vh;
+    left: 3vh;
+
+}
+
+h1 {
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    text-decoration: underline;
+    text-shadow: 0 0 7px white;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 40px;
+}
+
+
+span {
+    animation: changeColor 10s infinite;
+}
+
+.linha {
+    position: relative;
+    top:10vh;
+    display: block;
+    width: 2px;
+    /* largura da linha */
+    height: 85vh;
+    /* altura da linha */
+    background-color: transparent;
+    /* cor da linha */
+    border: 1px solid transparent;
+    animation: border-animation 3s infinite;
+    left: 20vw;
+    /* centralizar a linha */
+}
+
+.circulo {
+    width: 10px;
+    /* diâmetro do círculo */
+    height: 10px;
+    /* diâmetro do círculo */
+    background-color: white;
+    border: solid white;
+    /* cor do círculo */
+    border-radius: 50%;
+    /* círculo */
+    position: absolute;
+    top: -13px;
+    /* ajuste para centralizar o círculo verticalmente na ponta */
+    left: -6px;
+    /* ajuste para centralizar o círculo horizontalmente na ponta */
+}
+
+.circulo-meio {
+    width: 10px;
+    /* diâmetro do círculo */
+    height: 10px;
+    /* diâmetro do círculo */
+    background-color: white;
+    border: solid white;
+    /* cor do círculo */
+    border-radius: 50%;
+    /* círculo */
+    position: absolute;
+    top: 50vh;
+    /* ajuste para centralizar o círculo verticalmente na ponta */
+    left: -7px;
+    /* ajuste para centralizar o círculo horizontalmente na ponta */
+}
+
+
+
+.experiencia-1:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 7px white,
+        0 0 25px white;
+        
+}
+
+.experiencia-2:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 7px white,
+        0 0 25px white;
+}
+
+@keyframes border-animation {
+    0% {
+        border-color: grey;
+    }
+
+    50% {
+        border-color: white;
+    }
+
+    100% {
+        border-color: grey;
+    }
+}
+
+@keyframes changeColor {
+    0% {
+        color: rgb(23, 23, 28);
+        ;
+        /* Cor inicial */
+    }
+
+    /* Cor durante a animação */
+
+    50% {
+        color: white;
+        /* Cor durante a animação */
+    }
+
+    100% {
+        color: rgb(23, 23, 28);
+        /* Cor final, voltando para a cor original */
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        height: 210vh;
+        position: relative;
+        top:15vh;
+       }
+    
+       .container2{
+        height: 200vh;
+       }
+    
+       .container3 {
+        height: 190vh;
+       }
+        
+       .linha{
+        height: 180vh;
+       }
+    
+       .circulo-meio{
+        top:90vh;
+       }
+    
+       .experiencia-1, .experiencia-2 {
+        height: 110vh;
+       }
+    
+       .experiencias {
+        height: 160vh;
+        left: 5px;
+       }
+
+       
+}
+
+
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+    .container {
+        height: 170vh;
+       }
+    
+       .container2{
+        height: 160vh;
+       }
+    
+       .container3 {
+        height: 150vh;
+       }
+        
+       .linha{
+        height: 120vh;
+       }
+    
+       .circulo-meio{
+        top:70vh;
+       }
+    
+       .experiencia-1, .experiencia-2 {
+        height: 90vh;
+       }
+    
+       .experiencias {
+        height: 140vh;
+       }
+}
+
+
+
+@media only screen and (min-width: 901px) and (max-width: 1300px) {
+   .container {
+    height: 150vh;
+   }
+
+   .container2{
+    height: 130vh;
+   }
+
+   .container3 {
+    height: 120vh;
+   }
+    
+   .linha{
+    height: 100vh;
+    top:15vh;
+    
+   }
+
+   .circulo-meio{
+    top:60vh;
+   }
+
+   .experiencia-1, .experiencia-2 {
+    height: 70vh;
+   }
+
+   .experiencias {
+    height: 120vh;
+   }
+
+    
+
+}
