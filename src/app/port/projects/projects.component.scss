@@ -54,7 +54,6 @@ span{
 .card-1, .card-4{
     width: 60vw;
     height: 90vh;
-    cursor: pointer;
     border-radius: 20px;
     margin-top: 15px;
     animation: border-animation 3s infinite;
@@ -207,7 +206,7 @@ img{
 // botão
 button{
     position: relative;
-    width: 60px;
+    width: 70px;
     height: 30px;
     border-radius: 5px;
     align-items: center;
@@ -219,10 +218,12 @@ button{
     font-family: monospace;
     transition: all 0.5s ease;
     cursor: pointer;
+    margin-top: 15px;
     
 }
 
 button a{
+    color: black;
     text-decoration: none;
 }
 
